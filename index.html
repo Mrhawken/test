@@ -5,16 +5,12 @@
     <title>Yew App</title>
     
 <script type="module">
-import init, * as bindings from '/my-yew-app-f4147f391f5ad987.js';
-const wasm = await init({ module_or_path: '/my-yew-app-f4147f391f5ad987_bg.wasm' });
-
-
-window.wasmBindings = bindings;
-
-
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
-
+  import init, * as bindings from "./my-yew-app-f4147f391f5ad987.js";
+  const wasm = await init({ module_or_path: "./my-yew-app-f4147f391f5ad987_bg.wasm" });
+  window.wasmBindings = bindings;
+  dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 </script>
+    
 <link rel="modulepreload" href="/my-yew-app-f4147f391f5ad987.js" crossorigin="anonymous" integrity="sha384-QEWICzJRkJ2StRzibiBm8oh1/oYZ2nV5qaL1MWVUOtMB2cPOehKyD4oK8REvC91e"><link rel="preload" href="/my-yew-app-f4147f391f5ad987_bg.wasm" crossorigin="anonymous" integrity="sha384-5eHT2QoT7DGMBkxGrJ1YEaxMWrywO/BBBILp83qA7UTGvDBUnCSGitCI7az76V+T" as="fetch" type="application/wasm"></head>
 <body>
     <main></main>
